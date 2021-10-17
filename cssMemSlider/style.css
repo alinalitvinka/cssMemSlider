@@ -15,8 +15,7 @@
   margin: 0 auto;
   width: 65vw;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   overflow: hidden;
   padding-top: 2rem;
 }
@@ -55,20 +54,59 @@
 }
 
 input {
+  display: none;
+}
+
+.label-wrapper {
   order: 2;
-  margin-top: 0.675rem;
+  width: 15rem;
+  height: 2.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 1209px) {
 
-  input {
+  .label-wrapper {
     order: 1;
+    align-self: center;
   }
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label:hover div {
+  background-color: rgb(134, 129, 118);
+}
+
+label div {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: #6d5d46;
+}
+
+.first-drop:checked ~ .label-wrapper label:first-child div,
+.second-drop:checked ~ .label-wrapper label:nth-child(2) div,
+.third-drop:checked ~ .label-wrapper label:nth-child(3) div,
+.fourth-drop:checked ~ .label-wrapper label:nth-child(4) div,
+.fifth-drop:checked ~ .label-wrapper label:nth-child(5) div {
+  background-color: transparent;
+  border: 0.2rem solid #6d5d46;
 }
 
 @media screen and (max-width: 720px) {
 
-  input {
+  label div {
     width: 0.9rem;
     height: 0.9rem;
   }
@@ -153,6 +191,7 @@ input {
   font-size: 2.2rem;
   transform: translateX(-150%);
   transition: 1s;
+  color: #363028;
 }
 
 @media screen and (max-width: 1209px) {
