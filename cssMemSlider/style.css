@@ -15,7 +15,8 @@
   margin: 0 auto;
   width: 65vw;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
   overflow: hidden;
   padding-top: 2rem;
 }
@@ -70,7 +71,7 @@ input {
 
   .label-wrapper {
     order: 1;
-    align-self: center;
+    margin-left: 40%;
   }
 }
 
