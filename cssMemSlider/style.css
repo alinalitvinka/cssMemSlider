@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px; 
+}
+
+.slider {
+  margin: 0 auto;
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 720px) {
+
+  .slider {
+    width: 93vw;
+  }
+}
+
+.slider input:first-child {
+  margin-left: 10rem;
+}
+
+@media screen and (max-width: 1209px) {
+
+  .slider input:first-child {
+    margin-left: 26vw;
+  }
+
+  .fifth-drop {
+    margin-right: 26vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .slider input:first-child {
+    margin-left: 38vw;
+  }
+
+  .fifth-drop {
+    margin-right: 38vw;
+  }
+}
+
+input {
+  display: none;
+}
+
+.label-wrapper {
+  order: 2;
+  width: 15rem;
+  height: 2.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1209px) {
+
+  .label-wrapper {
+    order: 1;
+    margin-left: 40%;
+  }
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label:hover div {
+  background-color: rgb(134, 129, 118);
+}
+
+label div {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: #6d5d46;
+}
+
+.first-drop:checked ~ .label-wrapper label:first-child div,
+.second-drop:checked ~ .label-wrapper label:nth-child(2) div,
+.third-drop:checked ~ .label-wrapper label:nth-child(3) div,
+.fourth-drop:checked ~ .label-wrapper label:nth-child(4) div,
+.fifth-drop:checked ~ .label-wrapper label:nth-child(5) div {
+  background-color: transparent;
+  border: 0.2rem solid #6d5d46;
+}
+
+@media screen and (max-width: 720px) {
+
+  label div {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+.image-wrapper {
+  order: 0;
+  height: 43.33vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 720px) {
+
+  .image-wrapper {
+    height: 63.33vw;
+  }
+}
+
+.text-wrapper {
+  order: 1;
+  width: 37.75vw;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 1209px) {
+
+  .text-wrapper {
+    order: 2;
+    width: 65vw;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .text-wrapper {
+    width: 93vw;
+  }
+}
+
+.container {
+  display: flex;
+  width: 188.75vw;
+  transform: translateX(-80%);
+}
+
+@media screen and (max-width: 1209px) {
+
+  .container {
+    width: 325vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .container {
+    width: 465vw;
+  }
+}
+
+.mem {
+  order: 1;
+  width: 65vw;
+  transform: translateX(150%);
+  opacity: 0.5;
+  transition: 1s;
+}
+
+@media screen and (max-width: 720px) {
+
+  .mem {
+    width: 93vw;
+  }
+}
+  
+.text {
+  order: 0;
+  width: 37.75vw;
+  font-size: 2.2rem;
+  transform: translateX(-150%);
+  transition: 1s;
+  color: #363028;
+}
+
+@media screen and (max-width: 1209px) {
+
+  .text {
+    font-size: 1.8rem;
+    width: 65vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .text {
+    width: 93vw;
+    font-size: 1.28rem;
+  }
+}
+
+.first-drop:checked ~ .image-wrapper .first {
+  order: 0;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.first-drop:checked ~ .text-wrapper .first {
+  order: 1;
+  transform: translateX(0%);
+}
+
+.second-drop:checked ~ .image-wrapper .second {
+  order: 0;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.second-drop:checked ~ .text-wrapper .second {
+  order: 1;
+  transform: translateX(0%);
+}
+
+.third-drop:checked ~ .image-wrapper .third {
+  order: 0;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.third-drop:checked ~ .text-wrapper .third {
+  order: 1;
+  transform: translateX(0%);
+}
+
+.fourth-drop:checked ~ .image-wrapper .fourth {
+  order: 0;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.fourth-drop:checked ~ .text-wrapper .fourth {
+  order: 1;
+  transform: translateX(0%);
+}
+
+.fifth-drop:checked ~ .image-wrapper .fifth {
+  order: 0;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.fifth-drop:checked ~ .text-wrapper .fifth {
+  order: 1;
+  transform: translateX(0%);
+}
