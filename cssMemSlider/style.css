@@ -22,11 +22,12 @@
 }
 
 .slider input:first-child {
-  margin-left: 20rem;
+  margin-left: 10rem;
 }
 
 input {
   order: 2;
+  margin-top: 0.675rem;
 }
 
 .image-wrapper {
@@ -39,6 +40,15 @@ input {
 
 .text-wrapper {
   order: 1;
+  width: 37.75vw;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 188.75vw;
+  transform: translateX(-80%);
 }
 
 .mem {
@@ -50,9 +60,11 @@ input {
 }
   
 .text {
-  display: none;
-  width: 33.52vw;
+  order: 0;
+  width: 37.75vw;
   font-size: 2.2rem;
+  transform: translateX(-150%);
+  transition: 1s;
 }
 
 .first-drop:checked ~ .image-wrapper .first {
@@ -62,7 +74,8 @@ input {
 }
 
 .first-drop:checked ~ .text-wrapper .first {
-  display: block;
+  order: 1;
+  transform: translateX(0%);
 }
 
 .second-drop:checked ~ .image-wrapper .second {
@@ -72,7 +85,8 @@ input {
 }
 
 .second-drop:checked ~ .text-wrapper .second {
-  display: block;
+  order: 1;
+  transform: translateX(0%);
 }
 
 .third-drop:checked ~ .image-wrapper .third {
@@ -82,7 +96,8 @@ input {
 }
 
 .third-drop:checked ~ .text-wrapper .third {
-  display: block;
+  order: 1;
+  transform: translateX(0%);
 }
 
 .fourth-drop:checked ~ .image-wrapper .fourth {
@@ -92,7 +107,8 @@ input {
 }
 
 .fourth-drop:checked ~ .text-wrapper .fourth {
-  display: block;
+  order: 1;
+  transform: translateX(0%);
 }
 
 .fifth-drop:checked ~ .image-wrapper .fifth {
@@ -102,5 +118,6 @@ input {
 }
 
 .fifth-drop:checked ~ .text-wrapper .fifth {
-  display: block;
+  order: 1;
+  transform: translateX(0%);
 }
